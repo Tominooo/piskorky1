@@ -21,3 +21,6 @@ void Draw()
 }
 void Input()
 {
+    int a;
+    cout << "It's " << player << " turn. " << "Press the number of the field: ";
+    cin >> a;
