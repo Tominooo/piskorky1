@@ -9,7 +9,7 @@ int n;
 void Draw()
 {
     system("cls");
-    cout << "Tic Tac Toe v1.0" << endl;
+    cout << "Piskorky na Kysucu" << endl;
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
@@ -22,7 +22,7 @@ void Draw()
 void Input()
 {
     int a;
-    cout << "It's " << player << " turn. " << "Stlaète èíslo po¾a: ";
+    cout << "Teraz je " << player << " na rade " << "Stlacte cislo pola: ";
     cin >> a;
     if (a == 1)
     {
@@ -30,6 +30,26 @@ void Input()
             matrix[0][0] = player;
         else
         {
-            cout << "Pole je už zabraté" << endl;
+            cout << "Toto pole je uz zabrate!" << endl;
+            Input();
+        }
+    }
+    else if (a == 2)
+    {
+        if (matrix[0][1] == '2')
+            matrix[0][1] = player;
+        else
+        {
+            cout << "Toto pole je uz zabrate!" << endl;
+            Input();
+        }
+    }
+    else if (a == 3)
+    {
+        if (matrix[0][2] == '3')
+            matrix[0][2] = player;
+        else
+        {
+            cout << "Toto pole je uz zabrate!s" << endl;
             Input();
         }
