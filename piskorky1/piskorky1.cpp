@@ -22,5 +22,14 @@ void Draw()
 void Input()
 {
     int a;
-    cout << "It's " << player << " turn. " << "Press the number of the field: ";
+    cout << "It's " << player << " turn. " << "Stlaète èíslo po¾a: ";
     cin >> a;
+    if (a == 1)
+    {
+        if (matrix[0][0] == '1')
+            matrix[0][0] = player;
+        else
+        {
+            cout << "Pole je už zabraté" << endl;
+            Input();
+        }
